@@ -1,5 +1,5 @@
 ----- Spring Boot CRUD + MySQL:
-Một ứng dụng web đơn giản quản lý sản phẩm sử dụng Spring Boot, Spring Data JPA, MySQL và Thymeleaf.
++ Một ứng dụng web đơn giản quản lý sản phẩm sử dụng Spring Boot, Spring Data JPA, MySQL và Thymeleaf.
 
 ----- Chức năng:
 + Hiển thị danh sách sản phẩm
@@ -17,10 +17,10 @@ Một ứng dụng web đơn giản quản lý sản phẩm sử dụng Spring B
 + Maven	Quản lý thư viện
 
 ----- Cấu hình application.properties:
-spring.datasource.url=jdbc:mysql://localhost:3306/demospringdatajpa
-spring.datasource.username=root
-spring.datasource.password=
-spring.jpa.hibernate.ddl-auto=update
++ spring.datasource.url=jdbc:mysql://localhost:3306/demospringdatajpa
++ spring.datasource.username=root
++ spring.datasource.password=
++ spring.jpa.hibernate.ddl-auto=update
 
 ----- Cách chạy project:
 + Clone repo: git clone https://github.com/nguyenanhthangdev/springboot-crud-mysql.git
