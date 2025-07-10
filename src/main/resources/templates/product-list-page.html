@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh Sách Sản Phẩm</title>
+</head>
+<body>
+    <h1>DANH SÁCH SẢN PHẨM</h1>
+    <a type="button" href="/products/add">Thêm sản phẩm</a>
+    <hr/>
+
+    <div th:if="${products.size() != 0}" >
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Tên Sản Phẩm</th>
+                <th>Giá (VND)</th>
+                <th>Mô Tả</th>
+                <th>Sửa</th>
+                <th>Xóa</th>
+            </tr>
+            <tr th:each="p : ${products}">
+                <td th:text="${p.id}"></td>
+                <td th:text="${p.name}"></td>
+                <td th:text="${p.price}"></td>
+                <td th:text="${p.description}"></td>
+                <td>
+                    <a th:href="@{'/products/edit/' + ${p.id}}">Sửa</a>
+                </td>
+                <td>
+                    <a th:href="@{'/products/delete/' + ${p.id}}">Xóa</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div th:if="${products.size() == 0}" >
+        <p>Danh Sách Sản Phẩm Đang Trống!</p>
+    </div>
+
+</body>
+</html>
